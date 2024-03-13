@@ -26,5 +26,5 @@ gcloud config set project [YOUR PROJECT ID]
 ```
 Then we deploy our function with this command:
 ```
-gcloud function deploy [FUNCTION NAME   ] --runtime python37 --trigger-help
+gcloud functions deploy [FUNCTION NAME] --runtime python37 --trigger-http
 ```
