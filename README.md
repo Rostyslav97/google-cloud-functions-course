@@ -34,3 +34,19 @@ We have to create a `.env.yaml` file and a `requirements.txt` file in the same d
 ```
 gcloud functions deploy [FUNCTION_NAME] --env-vars-file .env.yaml --runtime python37 --trigger-http
 ```
+
+## Schedule Cloud Functions
+We execute the following commands:
+```
+gcloud components install beta
+gcloud components update
+gcloud pubsub topics create [TOPIC NAME]
+gcloud pubsub subscriptions create cron-sub --topic [TOPIC NAME]
+```
+
+
+## Deleting a Cloud Function
+To delete a Cloud Function run the following command:
+```
+gcloud functions delete [FUNCTION_NAME]
+```
